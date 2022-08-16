@@ -1,0 +1,22 @@
+BootStrap: docker
+From: opensuse/tumbleweed:latest
+
+%post
+zypper install make gcc gcc-c++ python3-pip java-11-openjdk java-11-openjdk-devel python310-numpy python310-numpy-devel libmariadb-devel python310-mysqlclient libnotify libSDL2-2_0-0 
+# apt update
+# apt -y upgrade
+
+# apt install -y make gcc build-essential libgtk-3-dev wget git vim locales
+# apt-get install -y --allow-unauthenticated python3-pip openjdk-11-jdk-headless default-libmysqlclient-dev libnotify-dev libsdl2-dev
+
+# export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+# export PATH=$PATH:/home/ubuntu/.local/bin
+
+
+# pip3 install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04 wxPython
+# pip install CellProfiler==4.2.4
+
+%labels
+Author jose.pereira@lnbio.cnpem.br
+Version v0.0.1
+Info Ubuntu 20.04 with CellProfiler4 preinstalled.
